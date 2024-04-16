@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage For ChitChat &#128515;</title>
+    <link rel="icon" type="image/png" href="./Images/ChatCraft.png">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/146c4de28e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-storage.js"></script>
+    <script>
+        module = [];
+    </script>
+    <script type="module" src="home.js"></script>
+
+</head>
+
+<body id="body">
+    <div class="grid-container" id="grid-container">
+        <div class="header" id="header">
+            <nav class="navbar-left" id="navbar-left">
+                <img src="./Images/ChatCraft.png" alt="ChatCraftLogo" height="40" width="40">
+                <ul class="list">
+                    <li class="list-item">
+                        <a href="#"><i class="fas fa-message"></i></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><i class="fas fa-address-book"></i></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><i class="fas fa-robot"></i></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><i class="fas fa-images"></i></a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#"><i class="fas fa-users-rectangle"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navbar-right">
+                <ul class="list">
+                    <li class="dropdown1">
+                        <i class="fas fa-boxes-stacked"
+                            style="font-size: 24px; cursor: pointer; height: 50px; width: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; background-color: #4C4D54; color: #BEC0CA;"></i>
+                        <div class="dropdown1-content hidden">
+                            <h2 id="quick">Quick Links</h2>
+                            <hr>
+                            <a href="#"><i class="fas fa-message"></i> Chat</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-address-book"></i> Contact</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-images"></i> Stories</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-robot"></i> ChatBot</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-hand-holding-dollar"></i> Pricing</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-circle-question"></i> FAQ</a>
+                            <hr>
+                            <h2>UI COMPONENTS</h2>
+                            <hr>
+                            <a href="#"><i class="fas fa-message"></i> Chat Replacies</a>
+                            <hr>
+                            <a href="#"><i class="fab fa-square-xing"></i> UseCase Modals</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-microchip"></i> Misc Elements</a>
+                            <hr>
+                        </div>
+                    </li>
+                    <li class="list-item"><a href=""><i class="far fa-bell"></i></a></li>
+                    <li class="dropdownuser">
+                        <!-- <i class="fas fa-user"></i> -->
+                        <div class="rightNav-Profile" id="rightNav-Profile"
+                            style="height: 50px; width: 50px; background-color:#494951;border-radius:50%">
+                        </div>
+                        <div class="dropdownuser-content hidden">
+                            <h2><i class="fas fa-moon common-icon"></i>Dark Mode</h2>
+                            <div class="checkbox-wrapper-5">
+                                <div class="check">
+                                    <input id="check-5" type="checkbox">
+                                    <label for="check-5"></label><span class="on">ON</span>
+                                    <span class="off">OFF</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="#"><i class="fas fa-user"></i>Profile</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-screwdriver-wrench"></i>Settings</a>
+                            <hr>
+                            <a href="#" id="changePhoto"><i class="fa-regular fa-id-badge"></i>Change DP</a>
+                            <hr>
+                            <a href="#" id="changePassword"><i class="fas fa-unlock"></i>Change Password</a>
+                            <hr>
+                            <a href="#" id="logOut"><i class="fas fa-arrow-right-from-bracket"></i>Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <aside class="sidebar-left">
+            <div class="sidebar-heading">
+                <div class="left">
+                    <h2>Chats</h2>
+                </div>
+                <div class="right">
+                    <h2 id="add"><i class="fa-solid fa-plus"></i>Add</h2>
+                    <h2 id="filter"><i class="fa-solid fa-sort"></i>Filter</h2>
+                </div>
+            </div>
+            <div class="sidebar-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Contact/ Chat">
+            </div>
+            <hr>
+
+            <div class="sidebar-content">
+                <p>Name 1</p>
+                <p>Name 2</p>
+                <p>Name 3</p>
+                <p>Name 4</p>
+                <p>Name 5</p>
+                <p>Name 6</p>
+                <p>Name 7</p>
+                <p>Name 8</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 9</p>
+                <p>Name 10</p>
+            </div>
+
+        </aside>
+        <main class="main-content" id="main-content">
+            <div class="centercontent" id="centercontent">
+                <div class="centerTopbar">
+                    <div class="left">
+                        <div class="topbardp"></div>
+                        <div class="topbarName">Name</div>
+                    </div>
+                    <div class="right">
+                        <div class="search" id="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div id="searchBar" class="search-bar">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </div>
+                        <div class="videocall" id="videocall-icon"><i class="fa-solid fa-video"></i></div>
+                        <div id="videoCallPopup" class="video-call-popup  hidden"><i class="fa-solid fa-rectangle-xmark"
+                                id="xMark"></i><i class="fa-solid fa-expand"></i>
+                            <div id="receiverVideo" class="video receiver-video"></div>
+                            <div id="senderVideo" class="video sender-video">
+                                <video autoplay="true" id="videoElement"></video>
+                            </div>
+                            <div class="controls">
+                                <div class="warning" id="camera-warning" style="display: none;">Camera is Off</div>
+
+                                <!-- Warning for microphone off -->
+                                <div class="warning" id="microphone-warning" style="display: none;">Microphone is Off
+                                </div>
+                                <i class="fa-solid fa-phone-slash hang-up-icon" id="hangup-button"></i>
+                                <i class="fa-solid fa-microphone microphone-icon" id="microphone-icon"></i>
+                                <i class="fa-solid fa-video video-icon" id="video-icon"></i>
+                            </div>
+                        </div>
+                        <div class="call"><i class="fa-solid fa-phone-flip"></i></div>
+                        <div class="side" id="side">
+                            <i id="slider" class="fa-solid fa-sliders" onclick="toggleSidebarRight()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="messageText" id="messages">
+                    <ul id="messageList">
+                        <li>YOUR MESSAGE SHOW HERE</li>
+                    </ul>
+                </div>
+                <div class="bottomInput">
+                    <div class="add"><i class="fa-solid fa-plus"></i></div>
+                    <div class="gallery"><i class="fa-solid fa-photo-film"></i></div>
+                    <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
+                    <div class="inputMsg">
+                        <input type="text" id="messageInput">
+                    </div>
+                    <div class="mic"><i class="fa-solid fa-microphone"></i></div>
+                    <div class="send" id="sendButton"><i class="fa-regular fa-paper-plane"></i></div>
+                </div>
+            </div>
+        </main>
+        <aside class="sidebar-right">
+            <div class="sidebarright-heading">
+                <div class="coverphoto"></div>
+                <div id="profilephoto" class="profilephoto"></div>
+                <div class="yourname">Your Name</div>
+            </div>
+            <div class="sidebarright-option">
+                <h2 id="muteOption"><i class="fa-solid fa-bell-slash" id="bellIcon" onclick="Mute()"></i>Mute</h2>
+
+                <h2 id="fa-photo-film"><i class="fa-solid fa-photo-film"></i>Media</h2>
+                <h2 id="optionLink" onclick="toggleCustomizeContent()"><i id="filterIcon"
+                        class="fa-solid fa-filter"></i>Option</h2>
+            </div>
+            <div class="customizeContent" id="customizeContent" style="display: none;">
+                <div class="navCustomize" id="customizeWrapper">
+                    <div class="customize" id="customizeLink">
+                        <h2 id="cust"><a href="#" id="cust1" onclick="toggleSection('customizedcontent')">Customize </a>
+                        </h2>
+                    </div>
+                    <div class="Manage" id="manageLink">
+                        <h2><a href="#" onclick="toggleSection('manageContent')"> Manage</a></h2>
+                    </div>
+                </div>
+                <hr>
+                <div class="customizedcontent" id="customizedcontent">
+                    <div class="changeTheme">
+                        <h2>Change theme</h2>
+                        <div class="color">
+                            <div class="red"></div>
+                            <div class="green"></div>
+                            <div class="blue"></div>
+                            <div class="purple"></div>
+                        </div>
+                    </div>
+                    <div class="changeBackground">
+                        <h2>Change Background</h2>
+                        <div class="backgroundImage">
+                            <div class="background1"></div>
+                            <div class="background2"></div>
+                            <div class="background3"></div>
+                            <div class="background4"></div>
+                        </div>
+
+                    </div>
+                    <div class="editNickname">
+                        <div class="heading">Edit Nickname</div>
+                        <div class="first">
+                            <div class="dp"></div>
+                            <div class="profileName">Name1</div>
+                            <div class="egNickname">nickName1</div>
+                        </div>
+                        <div class="second">
+                            <div class="dp"></div>
+                            <div class="profileName">Name2</div>
+                            <div class="egNickname">Nickname2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="manageContent" id="manageContent" style="display: none;">
+                    <div class=" block">
+                        <div class="blockIcon"><i class="fa-solid fa-user-lock"></i></div>
+                        <div class="blockContent">
+                            <h2>Block</h2>
+                            <p>Frank will no longer be in your contact</p>
+                        </div>
+                    </div>
+                    <div class="report">
+                        <div class="reportIcon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="reportContent">
+                            <h2>Report</h2>
+                            <p>Give Feedback of your contacts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="changePass hidden popup" id="changePass">
+            <i class="fas fa-rectangle-xmark" id="closeChangePass"></i>
+            <label for="enterPass">Enter Password:</label>
+            <input type="password" name="enterPass" id="enterPass">
+            <label for="confirmPass">Confirm Password:</label>
+            <input type="password" name="confirmPass" id="confirmPass">
+            <button id="confirmChange">Confirm</button>
+            <button id="back">Back</button>
+        </div>
+
+        <div class="changeDp hidden popup" id="changeDp">
+            <i class="fas fa-rectangle-xmark" id="closeChangeDp"></i>
+            <h2>Change Profile Picture</h2>
+            <div class="circle" id="imagePreview"></div>
+            <input type="file" accept="image/*" id="newDpInput">
+            <label for="newDpInput" class="newDpLabel">Choose New Picture</label>
+            <button id="uploadDpButton" onclick="uploadProfileImage()">Upload</button>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
